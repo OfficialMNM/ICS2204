@@ -8,9 +8,9 @@ def divide(num1,num2):
     return num1/num2
 
 print("Select Operation -\n" \
-      "1 Add" \
-      "2 Subtract" \
-      "3 Multiply" \
+      "1 Add\n" \
+      "2 Subtract\n" \
+      "3 Multiply\n" \
       "4 Divide\n" )
 
 select = int(input("Select operations form 1, 2, 3, 4 :"))
