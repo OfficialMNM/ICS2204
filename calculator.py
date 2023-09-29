@@ -28,7 +28,8 @@ elif select == 2:
 elif select == 3:
     print(number_1, "*", number_2, "=", multiply(number_1, number_2))
 elif select == 4:
-    print(number_1, "/", number_2, "=", divide(number_1, number_2))
+    print(number_1, "/",
+         number_2, "=", divide(number_1, number_2))
 elif select == 5:
     print(number_1, "%", number_2, "=", modulus(number_1, number_2))
 
