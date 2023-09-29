@@ -1,6 +1,6 @@
 #NYONGESA METHUSELLA MISIKO
 #SCT211-0069/2022
-
+from datetime import date
 def add(num1, num2) :
     return num1 + num2
 def subtract(num1, num2):
@@ -38,3 +38,27 @@ elif select == 5:
 
 else:
     print("Invalid input")
+
+
+
+# Function to calculate age
+def calculate_age(year_of_birth):
+    today = date.today()
+    birth_date = date(year_of_birth, 1, 1)  
+    age = today.year - year_of_birth - ((today.month, today.day) < (1, 1))
+    
+    # Calculate months and days
+    months = today.month - 1 if today.day < birth_date.day else today.month
+    days = today.day - birth_date.day if today.day >= birth_date.day else (30 - birth_date.day) + today.day
+
+    return age, months, days
+
+# Get year of birth from the user
+year_of_birth = int(input("Enter your year of birth: "))
+
+# Calculate age
+age, months, days = calculate_age(year_of_birth)
+
+# Display the results
+print(f"Your age is {age} years, {months} months, and {days} days.")
+
