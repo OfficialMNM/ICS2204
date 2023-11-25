@@ -1,7 +1,3 @@
-name = input("Enter your name:")
-
-greeting = "Hello, " + name
-print(greeting)
 class Calculator:
     def __init__(self):
         pass
@@ -16,9 +12,11 @@ class Calculator:
         return num1 * num2
 
     def divide(self, num1, num2):
-        if num2 == 0:
-            return "MATH ERROR"
-        return num1 / num2
+        try:
+            result = num1 / num2
+        except ZeroDivisionError:
+            return "MATH ERROR: Division by zero is not allowed."
+        return result
 
     def modulus(self, num1, num2):
         return num1 % num2
@@ -36,8 +34,12 @@ def main():
     user_data = input(":")
     
     if user_data in ["1", "2", "3", "4", "5"]:
-        num1 = int(input("Enter the first number:"))
-        num2 = int(input("Enter the second number:"))
+        try:
+            num1 = int(input("Enter the first number:"))
+            num2 = int(input("Enter the second number:"))
+        except ValueError:
+            print("Error: Please enter valid integers for the numbers.")
+            return
 
         if user_data == "1":
             result = calculator.add(num1, num2)
