@@ -1,3 +1,6 @@
+#NYONGESA METHUSELLA MISIKO
+#SCT211-0069/2022
+
 class Calculator:
     def __init__(self):
         pass
